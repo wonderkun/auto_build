@@ -10,20 +10,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest , windows-latest ]
     steps:
       - name: dump context
-        env:
-          $GITHUB_CONTEXT: ${{ toJSON(github) }}
-          $JOB_CONTEXT: ${{ toJSON(job)  }}
-          $STEP_CONTEXT: ${{ toJSON(steps)  }}
-          $RUNNER_CONTEXT: ${{ toJSON(runner)  }}
-          $STRATEGY_CONTEXT: ${{ toJSON(strategy)  }}
-          $MATRIX_CONTEXT: ${{ toJSON(matrix)  }}
         run: | 
-          echo "github $GITHUB_CONTEXT"
-          echo "job $JOB_CONTEXT"
-          echo "step $STEP_CONTEXT"
-          echo "runner $RUNNER_CONTEXT"
-          echo "strategy $STRATEGY_CONTEXT"
-          echo "matrix $MATRIX_CONTEXT"
+          echo " workdir: ${{ github.workspace }} "
