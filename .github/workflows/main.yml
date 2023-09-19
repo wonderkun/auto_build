@@ -16,5 +16,5 @@ jobs:
         env:
           MY_VAR: this is a test var # 定义变量
         run: |
-          echo  "first: ${{ MY_VAR }}"
+          echo  "first: $MY_VAR"
           echo  second: $MY_VAR
