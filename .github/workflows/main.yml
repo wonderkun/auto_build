@@ -23,10 +23,11 @@ jobs:
           mkdir build 
           cd build
           cmake --version 
-          cmake -D CMAKE_CONFIGURATION_TYPES=RelWithDebInfo ..\
+          cmake -D CMAKE_CONFIGURATION_TYPES=RelWithDebInfo ../
         shell: pwsh
       - name: build by cmake
         run: |
-          cmake --build . --config RelWithDebInfo
+          cd ${{ github.workspace }}/build
           ls
+          cmake --build . --config RelWithDebInfo
           ./CMakeProject1.exe
