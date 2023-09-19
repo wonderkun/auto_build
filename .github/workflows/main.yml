@@ -12,11 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo hello,world!
       - name: Run a multi-line script
+        env:
+          MY_VAR: this is a test var # 定义变量
         run: |
-          echo Add other action to build!
-          echo test, and deploy your project
- 
+          echo  "first: ${{ MY_VAR }}"
+          echo  second: $MY_VAR
