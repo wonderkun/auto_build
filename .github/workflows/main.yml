@@ -15,6 +15,7 @@ jobs:
       matrix:
         os: [windows-latest]
     steps:
+      - uses: actions/checkout@v2
       - name: list file in workdir 
         run: | 
           echo " workdir: ${{ github.workspace }} "
