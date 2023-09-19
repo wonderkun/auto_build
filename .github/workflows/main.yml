@@ -28,6 +28,14 @@ jobs:
       - name: build by cmake
         run: |
           cd ${{ github.workspace }}/build
-          ls
           cmake --build . --config RelWithDebInfo
-          ./CMakeProject1.exe
+          ls
+          zip main.zip -r ./CMakeProject1/
+      - name: Release
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          files: |
+            main.zip
+
+
