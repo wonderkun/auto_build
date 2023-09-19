@@ -12,9 +12,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a multi-line script
+      - name: dump context
         env:
-          MY_VAR: this is a test var # 定义变量
-        run: |
-          echo  "first: $MY_VAR"
-          echo  second: $MY_VAR
+          $GITHUB_CONTEXT: ${{ toJSON(github) }}
+          $JOB_CONTEXT: ${{ toJSON(job)  }}
+          $STEP_CONTEXT: ${{ toJSON(steps)  }}
+          $RUNNER_CONTEXT: ${{ toJSON(runner)  }}
+          $STRATEGY_CONTEXT: ${{ toJSON(strategy)  }}
+          $MATRIX_CONTEXT: ${{ toJSON(matrix)  }}
+        run: | 
+          echo "github $GITHUB_CONTEXT"
+          echo "job $JOB_CONTEXT"
+          echo "step $STEP_CONTEXT"
+          echo "runner $RUNNER_CONTEXT"
+          echo "strategy $STRATEGY_CONTEXT"
+          echo "matrix $MATRIX_CONTEXT"
