@@ -22,7 +22,7 @@ jobs:
           mkdir build 
           cd build
           cmake --version 
-          cmake -D CMAKE_CONFIGURATION_TYPES=RelWithDebInfo ../
+          cmake -D CMAKE_CONFIGURATION_TYPES=RelWithDebInfo ..\
         shell: pwsh
       - name: build by cmake
         run: |
