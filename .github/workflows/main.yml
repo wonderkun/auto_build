@@ -1,4 +1,4 @@
-name: OneFLOW_Linux_CI
+name: run_first
 
 # Controls when the workflow will run
 on:
