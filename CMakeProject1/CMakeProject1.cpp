@@ -2,11 +2,13 @@
 //
 
 #include "CMakeProject1.h"
+#include "hello.h"
 
 using namespace std;
 
 int main()
-{
+{	
+	SayHello();
 	cout << "Hello CMake." << endl;
 	return 0;
 }
