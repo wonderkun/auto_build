@@ -3,8 +3,7 @@
 
 #include <iostream>
 
-void SayHello();
+#define MY_LIB_API __declspec(dllexport)
+
+extern "C" MY_LIB_API void SayHello();
 #endif
-
-
-
