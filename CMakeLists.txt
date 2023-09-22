@@ -24,3 +24,10 @@ endif()
 
 add_subdirectory("CMakeProject1")
 add_subdirectory("hello")
+
+INSTALL(
+    TARGETS CMakeProject1 hello
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION bin
+    ARCHIVE DESTINATION bin 
+)
