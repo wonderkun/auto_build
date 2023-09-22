@@ -13,7 +13,6 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中文(简体，中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
@@ -67,13 +66,13 @@ BEGIN
     BEGIN
         BLOCK "080404b0"
         BEGIN
-            VALUE "CompanyName", "RedTeam Center"
-            VALUE "FileDescription", "chrome browser"
+            VALUE "CompanyName", "${COMPANY_NAME}"
+            VALUE "FileDescription", "${FILE_DESC}"
             VALUE "FileVersion", "1.0.0.1"
             VALUE "InternalName", "ConsoleA.exe"
             VALUE "LegalCopyright", "Copyright (C) 2023"
             VALUE "OriginalFilename", "ConsoleA.exe"
-            VALUE "ProductName", "google chrome"
+            VALUE "ProductName", "${PRODUCT_NAME}"
             VALUE "ProductVersion", "1.0.0.1"
         END
     END
@@ -91,9 +90,9 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_ICON1               ICON                    "icon1.ico"
+IDI_ICON1               ICON                    "${ICON_PATH}"
 
-#endif    // 中文(简体，中国) resources
+#endif   
 /////////////////////////////////////////////////////////////////////////////
 
 
