@@ -28,7 +28,7 @@ jobs:
       - name: build by cmake
         run: |
           cd ${{ github.workspace }}/build
-          cmake --build . --config RelWithDebInfo
+          cmake --build . --config RelWithDebInfo --target install
           ls
           Compress-Archive -Path ./bin/* -Destination ../main.zip
       - name: Release
