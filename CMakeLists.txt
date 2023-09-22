@@ -24,6 +24,7 @@ endif()
 
 add_subdirectory("CMakeProject1")
 add_subdirectory("hello")
+set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}")
 
 INSTALL(
     TARGETS CMakeProject1 hello
