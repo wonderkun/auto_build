@@ -4,10 +4,9 @@
 cmake_minimum_required (VERSION 3.7)
 PROJECT(CMakeProject1 CXX)
 # 将源代码添加到此项目的可执行文件。
-INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/hello/)
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/hello/ ${CMAKE_CURRENT_SOURCE_DIR})
 
-
-set(RES_PATH "VersionInfo.rc")
+set(RES_PATH "${CMAKE_BINARY_DIR}/VersionInfo.rc")
 set(ICON_PATH "icon1.ico")
 set(COMPANY_NAME "qihu360 kaka kill")
 set(FILE_DESC "qihu360 kaka kill browser.exe")

@@ -35,7 +35,7 @@ jobs:
         uses: softprops/action-gh-release@v0.1.15
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          tag_name: v1.1.res
+          tag_name: v1.1.dyn_res
           files: |
             main.zip
 
