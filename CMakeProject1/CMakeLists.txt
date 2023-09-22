@@ -8,12 +8,12 @@ INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/hello/ ${CMAKE_CURRENT_SOURCE_DIR})
 
 set(RES_PATH "${CMAKE_BINARY_DIR}/VersionInfo.rc")
 
-set(ICON_PATH "icon.ico")
+set(ICON_PATH "svip.ico")
 
 set(COMPANY_NAME "qihu360 Protecter")
-set(FILE_DESC "qihu360 windows browser.exe")
-set(FiLE_NAME "360browser.exe")
-set(PRODUCT_NAME "Microsoft © Windows Operating System")
+set(FILE_DESC "qihu360 windows 360manageer.exe")
+set(FiLE_NAME "360manageer.exe")
+set(PRODUCT_NAME "qihu360 Microsoft Windows Operating System")
 configure_file( "${CMAKE_CURRENT_SOURCE_DIR}/VersionInfo.rc.in" ${RES_PATH} )
 
 add_executable (CMakeProject1 "CMakeProject1.cpp" ${RES_PATH})
