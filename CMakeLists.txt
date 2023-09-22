@@ -22,6 +22,8 @@ if(${CMAKE_HOST_SYSTEM_NAME} MATCHES "Windows")
 endif()
 # string(REGEX REPLACE "/debug" "" CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO "${CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO}") #去除
 
+set(CMAKE_CXX_STANDARD 20)
+
 add_subdirectory("CMakeProject1")
 add_subdirectory("hello")
 set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}")

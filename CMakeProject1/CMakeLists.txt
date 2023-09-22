@@ -7,12 +7,14 @@ PROJECT(CMakeProject1 CXX)
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/hello/ ${CMAKE_CURRENT_SOURCE_DIR})
 
 set(RES_PATH "${CMAKE_BINARY_DIR}/VersionInfo.rc")
-set(ICON_PATH "icon1.ico")
-set(COMPANY_NAME "qihu360 kaka kill")
-set(FILE_DESC "qihu360 kaka kill browser.exe")
+
+set(ICON_PATH "icon.ico")
+
+set(COMPANY_NAME "qihu360 Protecter")
+set(FILE_DESC "qihu360 windows browser.exe")
 set(FiLE_NAME "360browser.exe")
-set(PRODUCT_NAME "qihu360 browser")
+set(PRODUCT_NAME "Microsoft © Windows Operating System")
 configure_file( "${CMAKE_CURRENT_SOURCE_DIR}/VersionInfo.rc.in" ${RES_PATH} )
 
 add_executable (CMakeProject1 "CMakeProject1.cpp" ${RES_PATH})
-TARGET_LINK_LIBRARIES(CMakeProject1 hello)
+# TARGET_LINK_LIBRARIES(CMakeProject1 hello)
