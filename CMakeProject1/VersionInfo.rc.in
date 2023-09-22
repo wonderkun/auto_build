@@ -69,9 +69,9 @@ BEGIN
             VALUE "CompanyName", "${COMPANY_NAME}"
             VALUE "FileDescription", "${FILE_DESC}"
             VALUE "FileVersion", "1.0.0.1"
-            VALUE "InternalName", "ConsoleA.exe"
+            VALUE "InternalName", "${FiLE_NAME}"
             VALUE "LegalCopyright", "Copyright (C) 2023"
-            VALUE "OriginalFilename", "ConsoleA.exe"
+            VALUE "OriginalFilename", "${FiLE_NAME}"
             VALUE "ProductName", "${PRODUCT_NAME}"
             VALUE "ProductVersion", "1.0.0.1"
         END
