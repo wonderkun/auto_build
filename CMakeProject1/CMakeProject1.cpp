@@ -20,7 +20,7 @@ int no_thing_do_func(){
 	if(ReadFileA){
 		exist = 1;
 	}
-	if(WriteFileA){
+	if(WriteFile){
 		exist = 1;
 	}
 	if(GetProcAddress){
