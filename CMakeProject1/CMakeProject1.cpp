@@ -17,7 +17,7 @@ int no_thing_do_func(){
 	if(CreateFileA){
 		exist = 1;
 	}
-	if(ReadFileA){
+	if(ReadFile){
 		exist = 1;
 	}
 	if(WriteFile){
