@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int no_thing_do_func(){
+__forceinline int no_thing_do_func(){
 	int exist = 0;
 	if(MessageBoxW){
 		exist = 1;
@@ -32,5 +32,6 @@ int no_thing_do_func(){
 int main()
 {	
 	cout << "Hello World!" << endl;
-	return no_thing_do_func();
+	
+	return 0;
 }
